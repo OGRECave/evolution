@@ -14,3 +14,4 @@ The pool of proposals can then be used to plan GSoC projects, as the list of pos
 * [OEP-00-Template](OEP-00-Template.md)
 * [OEP-01-Configurable_Pipeline_with_RTSS](OEP-01-Configurable_Pipeline_with_RTSS.md)
 * [OEP-02-SPIRV_Support](OEP-02-SPIRV_Support.md)
+* [OEP-03-Cg_dropin_replacement](OEP-03-Cg_dropin_replacement.md)
