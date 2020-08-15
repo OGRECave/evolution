@@ -2,8 +2,8 @@
 
 * Author: [Pavel Rojtberg](https://github.com/paroj)
 * Link: [The issue](https://github.com/OGRECave/evolution/issues/2)
-* Status: **Draft**
-* Platforms: **GLES2, GL3Plus**
+* Status: **Open**
+* Platforms: **GL3Plus**
 * Complexity: 3 man-months
 
 ## Introduction and Rationale
@@ -22,10 +22,12 @@ Also add SPIRV compatible sources to the RTShaderLib to demo on-the fly translat
 
 ## Impact on existing code, compatibility
 
-This is purely a new feature, so exiting code should not be affected. Some changes to the GLES2/ GL3Plus RenderSystems have to be made so they can load precompiled low-level shaders.
-However we already have a boilerplate for this in the legacy GL RenderSystem as this is how the first ARB shader programs worked.
+This is purely a new feature, so exiting code should not be affected. Some changes to the GL3Plus RenderSystem have to be made so they can load precompiled low-level shaders.
+However we already have a boilerplate for this in the legacy GL RenderSystem as this is how the first ARB shader programs worked. **DONE**
 
 The Plugin will need to build glslang which is a beast. However this will only affect the Plugin build and it is fine when it only works on Linux at first, where the build is more tractable.
+
+Finally, the RTSS must be extended to support the SPIRV GLSL flavour, mainly introducing explicit uniform and attribute locations.
 
 ## Possible alternatives
 
@@ -36,3 +38,4 @@ Just implement the loading part in the RenderSystems. However this will result i
 1. [glslang](https://github.com/KhronosGroup/glslang)
 2. [SPIRV](https://www.khronos.org/registry/spir-v/)
 3. [shaderc](https://github.com/google/shaderc)
+4. [Layout Qualifier (GLSL)](https://www.khronos.org/opengl/wiki/Layout_Qualifier_(GLSL)#Explicit_uniform_location)
