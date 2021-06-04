@@ -25,7 +25,7 @@ Also add SPIRV compatible sources to the RTShaderLib to demo on-the fly translat
 This is purely a new feature, so exiting code should not be affected. Some changes to the GL3Plus RenderSystem have to be made so they can load precompiled low-level shaders.
 However we already have a boilerplate for this in the legacy GL RenderSystem as this is how the first ARB shader programs worked. **DONE**
 
-The Plugin will need to build glslang which is a beast. However this will only affect the Plugin build and it is fine when it only works on Linux at first, where the build is more tractable.
+The Plugin will need to build glslang which is a beast. However this will only affect the Plugin build and it is fine when it only works on Linux at first, where the build is more tractable. **DONE**
 
 Finally, the RTSS must be extended to support the SPIRV GLSL flavour, mainly introducing explicit uniform and attribute locations.
 
